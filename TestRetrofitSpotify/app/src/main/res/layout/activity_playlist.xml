@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutPlaylist"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#072700"
+    tools:context=".view.PlaylistActivity">
+
+    <TextView
+        android:id="@+id/textViewNomPlaylistActPlaylist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:fontFamily="sans-serif-black"
+        android:text="NOM PLAYLIST"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewPlaylistActPlaylist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPlaylistActPlaylist"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPlaylistActPlaylist" />
+
+    <ImageView
+        android:id="@+id/imageViewPlaylistActPlaylist"
+        android:layout_width="60dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRetour"
+        app:srcCompat="@drawable/no_picture" />
+
+    <Button
+        android:id="@+id/buttonRetour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="onClickRetour"
+        android:text="Retour"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonAddTrack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="onClickAddTrack"
+        android:text="Ajouter un titre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPlaylistActPlaylist" />
+
+    <Button
+        android:id="@+id/buttonAddAlbum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="onClickAddAlbum"
+        android:text="Ajouter un album"
+        app:layout_constraintEnd_toEndOf="@+id/buttonAddTrack"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/buttonAddTrack"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAddArtistPlaylistActivity" />
+
+    <ListView
+        android:id="@+id/listTracksPlaylist"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAddAlbum" />
+
+    <Button
+        android:id="@+id/buttonAddArtistPlaylistActivity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="onClickAddArtist"
+        android:text="Ajouter un artiste"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAddTrack" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

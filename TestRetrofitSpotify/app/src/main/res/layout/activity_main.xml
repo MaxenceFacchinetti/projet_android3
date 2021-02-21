@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutMainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#072700"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewMe"
+        android:layout_width="283dp"
+        android:layout_height="27dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="NOM SPOTIFY"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewMe"
+        app:layout_constraintTop_toTopOf="@+id/imageViewMe" />
+
+    <ImageView
+        android:id="@+id/imageViewMe"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/buttonDeconnexion"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:onClick="onClickButtonDeconnexion"
+        android:text="Deconnexion"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewMe"
+        app:layout_constraintEnd_toEndOf="@+id/textViewMe"
+        app:layout_constraintStart_toStartOf="@+id/textViewMe" />
+
+    <ListView
+        android:id="@+id/listViewListePlaylists"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAjouterPlaylist" />
+
+    <Button
+        android:id="@+id/buttonAjouterPlaylist"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="onClickButtonAjouterPlaylist"
+        android:text="Ajouter une playlist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTopArtists" />
+
+    <Button
+        android:id="@+id/buttonTopTracks"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="onClickTopTracks"
+        android:text="Top Titres"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDeconnexion" />
+
+    <Button
+        android:id="@+id/buttonTopArtists"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="onClickTopArtists"
+        android:text="Top Artistes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDeconnexion" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
